@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div id="container">
+        <form action="abc.php" method="post" style="width: 500px;margin: 10px auto;background: #d1c7c7;border-radius: 10px;padding: 10px;padding-left: 60px;padding-right: 60px;padding-bottom: 30px;">
+            <h1 style="text-align: center;">Sign Up</h1>
+            <span style="    display: inline-block;background: #50a08c;color: white;padding: 8px 15px 8px 14px;border-radius: 100%;font-size: 21px;">1</span>
+            <span style="font-size: 20px;font-weight: bold;">Your basic infor</span>            
+            <br>
+            <span>Name:</span>
+            <br>
+            <input type="text" name="username" placeholder="Input your username" style="margin-top: 5px;margin-bottom: 10px;width: 100%;padding-top: 10px;padding-bottom: 10px;padding-left:5px;padding-right: 0px;"></input>
+            <br>
+            <span>Email:</span>
+            <br>
+            <input type="text" name="email" placeholder="Input your email" style="margin-top: 5px;margin-bottom: 10px;width: 100%;padding-top: 10px;padding-bottom: 10px;padding-left:5px;padding-right: 0px;"></input>
+            <br>
+            <span>Password:</span>
+            <br>
+            <input type="password" name="password" placeholder="Input your password" style="margin-top: 5px;margin-bottom: 10px;width: 100%;padding-top: 10px;padding-bottom: 10px;padding-left:5px;padding-right:0px;"></input>
+            <br>
+            Age:
+            <br>
+            <input type="radio" name="age_user" value="under13" style="margin-top: 5px;margin-bottom: 10px">Under 13</input>
+            <br>
+            <input type="radio" name="age_user" value="over13">13 or older</input>
+            <br>
+
+            <!-- Phần 2 bắt đầu tại đây -->
+            <span style="    display: inline-block;background: #50a08c;color: white;padding: 8px 15px 8px 14px;border-radius: 100%;font-size: 21px;">2</span>
+            <span style="font-size: 20px;font-weight: bold;">Your profile</span>
+            <br>
+            <span>Biography</span>
+            <br>
+            <textarea name="" id="bio" cols="67" rows="5" placeholder="Input your bio here" style="margin-top: 5px;margin-bottom: 10px"></textarea>
+            <br>
+            <br>
+            <br>
+            <span>Job Role:</span>
+            <br>
+            <select name="job" id="jobid" style="margin-top: 5px;margin-bottom: 10px">
+                <optgroup label="WEB">
+                    <option value="front_end_developer">Front-End Developer</option>
+                    <option value="php_developer">PHP Developer</option>
+                    <option value="python_developer">Python Developer</option>
+                </optgroup>
+                <optgroup label="MOBILE">
+                    <option value="front_end_developer">Front-End Developer</option>
+                    <option value="php_developer">PHP Developer</option>
+                    <option value="python_developer">Python Developer</option>
+                </optgroup>
+                <optgroup label="BUSINESS">
+                    <option value="front_end_developer">Front-End Developer</option>
+                    <option value="php_developer">PHP Developer</option>
+                    <option value="python_developer">Python Developer</option>
+                </optgroup>
+                <option value="demo1">New option 1</option>
+                <option value="demo2">New option 2</option>
+            </select>
+            <br>
+            <span>Interests:</span>
+            <br>
+            <input type="checkbox" value="test1" name="checkInteres">Developer</input>
+            <br>
+            <input type="checkbox" value="test2" name="checkInteres">Design</input>
+            <br>
+            <input type="checkbox" value="test3" name="checkInteres">Business</input>
+            <br>
+            <input type="submit" value="Sign Up Now" style="width: 100%;padding: 20px;color: white;background: #50a08c;border-radius: 25px;font-size: 20px;"></input>
+        </form>
+    </div>
+</body>
+</html>
