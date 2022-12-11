@@ -1,0 +1,438 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;/* hành vi khi cuộn */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+/* Common */
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+    /* Vì .place-item {
+        margin: 32px -8px 48px;
+        chỉ có -8px là của row => ở trên
+    } */
+}
+
+.row::after {/* dùng lớp giả sau row tránh code xấu */
+    /* vì float ko ôm hết => clear  */
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    /*
+    Vì .place-item {
+        float: left;
+        width: 33.33333% (ko dùng vì có cột 3 cột 2)
+        padding: 0 8px;
+        =>pl pr 8px
+    }
+    */
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: 33.33333333%;
+    /*
+    dùng chung cho 3 cột => xóa luôn thằng place-item
+    */
+}
+
+.col-full {
+    width: 100%;
+}
+
+.btn {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    /* khi padding thì khoảng cách đẩy lên mãi mãi mà
+    chữ ở trên vẫn giữ nguyên => dùng inline-block */
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: black;
+    background-color: #ccc;
+}
+
+#main {
+
+}
+
+/* HEADER */
+#header {
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* NAV */
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav li a {
+    line-height: 46px;
+    text-decoration: none;
+    color: white;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav > li:hover > a,
+#nav > li:hover > .subnav > li:hover > a {
+    background-color: #ccc;
+    color: black;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav li {
+
+}
+
+#nav .subnav li a {
+    background-color: white;
+    color: black;
+    padding: 0 16px;
+    min-width: 160px;
+    height: 38px;
+}
+
+.arrow-down {
+    font-size: 12px;
+}
+/* END NAV */
+
+/* SEARCH BTN */
+.search-btn {
+    float: right;
+    color: white;
+    line-height: 46px;
+    padding: 0 24px;
+}
+
+.search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+.search-icon {
+    font-size: 20px;
+}
+/* END SEARCH BTN */
+
+/* SLIDER */
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('image/slider1.jpg') no-repeat top center / cover;
+}
+
+#slider .text-content {
+    position: absolute;
+    color: white;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#slider .text-heading {
+    font-weight: 400;
+    font-size: 24px;
+    margin: 25px;
+}
+
+#slider .text-description {
+    font-size: 15px;
+}
+
+/* END SLIDER */
+
+/* CONTENT */
+#content {
+
+}
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 0px 112px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+/* ABOUT SECTION */
+
+#content .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .member-list {
+    margin-top: 48px;
+}
+
+#content .member-item {
+    /* width: 33.33333%; */
+    /*
+    float: left;    
+    /* =display: inline-block
+    khi dùng float tất cả thẻ con thì thẻ cha bị co lại ko ôm thẻ con
+    thẻ con chui ra 1 khoảng không gian khác cách khắc phục:
+    dùng overfloat: hidden
+    hoặc dùng clear: both */
+    /* text-align: center; */
+}
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .member-img {
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+/* END ABOUT SECTION */
+
+/* TOUR SECTION */
+.tour-section {
+    background-color: #000;
+}
+
+.tickets-list {
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.tickets-list li {
+    color: #757575;
+    list-style-type: none;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.tickets-list .quantity {
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    padding: 5px 10px;
+    float: right;
+    margin-top: -3px;
+    /*
+    dùng float thì margin top bot phải âm
+    */
+}
+/* END TOUR SECTION */
+
+/* PLACES */
+.places-list {
+    /* margin: 32px -8px 0 -8px; */
+    /* kỹ thuật margin âm dùng khi 2 mép ảnh ko thẳng hàng */
+    /* padding-bottom: 48px;  */
+    /* do dùng .row nên ko dùng 3 dòng trên */
+    margin-top: 32px;
+}
+
+/* .place-item {
+    width: 33.33333333%;
+} */
+
+.place-img {
+    width: 100%;    /*
+    Vì hình ảnh lớn hơn ô chứa nó nên cách xử lý là
+    width: 100%
+    */
+    display: block;
+    /*
+    do có khoảng cách giữa ảnh và content nên dùng display: block
+    vào img
+    */
+}
+
+.place-img:hover {
+    opacity: 0.6;
+    /* opacity: 0-1 */
+}
+
+.place-body {
+    padding: 16px;
+    font-size: 15px;
+    background-color: #fff;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-description {
+    margin-top: 15px;
+    line-height: 1.4;
+    /* tiếng việt 1.6, tiếng anh 1.4 */
+}
+/* END PLACES */
+
+/* CONTACT FORM */
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-infor {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-infor i[class*="ti-"] {/* selector nâng cao */
+    width: 30px;
+    /*
+    dùng width để chắc chắn các chữ cái thẳng hàng
+    vì khi dùng padding có thể sẽ bị ko thẳng
+    */
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    /* outline: none; bỏ border ngoài */
+}
+/* END CONTACT FORM */
+
+/* MAP SECTION */
+.map-section img {
+    /* vì thẻ div kế thừa hết 100% màn hình
+    còn thẻ img thì ko co nên css cho img */
+    width: 100%;
+}
+/* END MAP SECTION */
+
+/* END CONTENT */
+
+/* FOOTER */
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socials-list {
+    font-size: 24px;
+}
+
+#footer .socials-list a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copyright {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a {
+    color: rgba(0, 0, 0, 0.6);
+}
+/* END FOOTER */
