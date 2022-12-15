@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+#main {
+
+}
+
+/* LOGO */
+#logo {
+    width: 100%;
+    height: 85px;
+}
+
+.logo-img {
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* HEADER */
+#header {
+    width: 100%;
+    background-color: black;
+    height: 50px;
+}
+
+/* NAV */
+#nav {
+    
+}
+
+#nav li {
+    float: left;
+    list-style-type: none;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: white;
+    line-height: 50px;
+    padding: 0 13px;
+    display: block;
+}
+
+#nav li:hover a {
+    color: black;
+    background-color: #ccc;
+}
+
+/* SLIDER */
+#slider {
+    margin-top: 18px;
+    width: 100%;
+}
+
+#slider-img {
+    width: 100%;
+}
+
+#slider-content {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* PRODUCT */
+#product {
+    margin-top: 10px;
+}
+
+#product-col {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+#clear {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.row-1 {
+    margin: 10px;
+}
+.row-2 {
+    margin: 10px;
+}
+
+/* FEATURE */
+.feature {
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+.feature-content {
+    text-align: center;
+    font-size: 25px;
+}
+
+.row {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col-3 {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 33.333333333%;
+}
+
+.col-4 {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 25%;
+}
+
+.img-edit {
+    width: 100%;
+}
+
+.heading-description {
+    font-size: 25px;
+    padding: 8px 0 8px 0;  
+}
+
+.description {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.btn {
+    color: white;
+    background-color: rgb(225, 24, 24);
+    padding: 8px 14px 8px 14px;
+    margin-top: 15px;
+    border-radius: 7px;
+    display: inline-block;
+}
+
+/* SALE OFF */
+#sale-off {
+    margin-top: 10px;
+    padding-top: 10px;
+    position: relative;
+    padding-top: 31%;
+    background: url('image/nature.jpg') no-repeat top center / cover;
+}
+
+.text-content {
+    position: absolute;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    bottom: 200px;
+    left: 20%;
+    transform: translateX(-50%);
+    background-color: rgba(187, 28, 28, 0.6);
+    border-radius: 100%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* CONTACT */
+.service-img {
+    padding-top: 25px;
+    width: 70px;
+    height: 101px;
+}
+
+.heading-service {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.content-service {
+    font-size: 14px;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 15px;
+    background-color: black;
+    height: 145px;
+}
+
+.footer-content {
+    padding-top: 15px;
+    text-align: center;
+    color: white;
+    line-height: 1.6;
+}
